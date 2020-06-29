@@ -1,0 +1,8 @@
+{
+  "name": "croc-movie",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}
