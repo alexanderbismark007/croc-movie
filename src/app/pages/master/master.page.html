@@ -1,0 +1,38 @@
+<!-- <app-header title="Top 10 Movies"></app-header> -->
+
+<ion-content fullscreen class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3>{{ 'POSTER' | translate}}</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-poster [movie]="movies"></app-poster>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3>{{ 'CAROUSEL' | translate}}</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-carousel [movie]="movies"></app-carousel>
+
+  <ion-app>
+    <ion-fab horizontal="end" vertical="top" slot="fixed">
+      <ion-fab-button color="primary">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="start">
+        <ion-fab-button color="light" (click)="toMap()">
+          <ion-icon name="basket-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="danger" (click)="toLogin()">
+          <ion-icon name="close-outline" ></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+  </ion-app>
+</ion-content>

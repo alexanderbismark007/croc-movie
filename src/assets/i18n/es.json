@@ -1,0 +1,15 @@
+{
+  "WELCOME": "Bienvenido",
+  "EMAIL": "Correo",
+  "PASSWORD": "Contraseña",
+  "SIGNIN": "Ingresar",
+  "FORGOT": "¿Olvido su contraseña?",
+  "LANGUAGE": "Seleccione el lenguaje",
+  "POSTER": "Cartelera",
+  "CAROUSEL": "Carrusel",
+  "RATING": "Clasificación",  
+  "VOTES": "Votos",
+  "RETURN": "Retornar",
+  "BUY": "Comprar",
+  "MAPS": "Mi casa"
+}

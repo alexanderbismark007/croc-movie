@@ -1,0 +1,9 @@
+<ion-slides [options]="previewConf">
+  <ion-slide *ngFor="let mov of movie">
+    <ion-card (click)="getDetail( mov.id )">
+      <img [src]="mov.backdrop_path | image">
+      <h3>{{mov.title}}</h3>
+      <h5 class="ion-text-justify">{{mov.overview}}</h5>
+    </ion-card>
+  </ion-slide>
+</ion-slides>

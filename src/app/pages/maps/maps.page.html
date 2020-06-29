@@ -1,0 +1,24 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>{{ "MAPS" | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="map_canvas"></div>
+  <ion-app>
+    <ion-fab horizontal="end" vertical="top" slot="fixed">
+      <ion-fab-button color="primary">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="start">
+        <ion-fab-button color="success" (click)="locateHome()">
+          <ion-icon name="location-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="danger" (click)="toMain()">
+          <ion-icon name="close-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+  </ion-app>
+</ion-content>

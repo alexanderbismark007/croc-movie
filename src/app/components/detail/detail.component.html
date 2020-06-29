@@ -1,0 +1,60 @@
+
+<ion-content>
+    <ion-label class="ion-text-center">
+        <h1> {{ detailMovie.title }} </h1>
+    </ion-label>
+
+
+    <img [src]="detailMovie.backdrop_path | image" *ngIf="detailMovie.backdrop_path">
+    <ion-row>
+        <ion-col size="12">
+            <ion-chip *ngFor="let genero of detailMovie.genres" color="primary">
+                <ion-label>{{ genero.name }}</ion-label>
+            </ion-chip>
+        </ion-col>
+    </ion-row>
+    <ion-item>
+        <ion-icon slot="start" name="people-circle-outline" color="primary"></ion-icon>        
+        <ion-label>{{ "RATING" | translate}}</ion-label>
+        <ion-badge slot="end">{{ detailMovie.vote_average }}</ion-badge>
+    </ion-item>
+    <ion-item>
+        <ion-icon slot="start" name="pulse-outline" color="primary"></ion-icon>
+        <ion-label>{{ "VOTES" | translate}}</ion-label>
+        <ion-badge slot="end">{{ detailMovie.vote_count }}</ion-badge>
+    </ion-item>
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col size=12>
+                <ion-label> {{ detailMovie.overview | slice: 0: limit }}... </ion-label>
+                <ion-label color="primary" (click)="limit = 5000" *ngIf="limit !== 5000">Leer más!</ion-label>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-row>
+        <ion-col size="12">
+            <ion-chip *ngFor="let lang of detailMovie.spoken_languages" color="primary">
+                <ion-label>{{ lang.name }}</ion-label>
+            </ion-chip>
+        </ion-col>
+    </ion-row>
+</ion-content>
+
+
+<ion-footer no-border>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="toBack()">            
+          <ion-icon slot="start" name="chevron-back-circle-outline" color="primary"></ion-icon>
+          <ion-label>{{ "RETURN" | translate}}</ion-label>
+        </ion-button>
+      </ion-buttons>
+  
+      <ion-buttons slot="end">
+        <ion-button (click)="toBuy()">
+          <ion-label>{{ "BUY" | translate}}</ion-label>
+          <ion-icon slot="end" name="basket-outline" color="primary"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-footer>
