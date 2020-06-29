@@ -67,6 +67,7 @@ export class LoginPage implements OnInit, OnDestroy {
       this.navCtrl.navigateForward('/master');
     else{
       this.presentToast('Modo OFFLINE');
+      this.navCtrl.navigateForward('/master');
     }
   }
 
