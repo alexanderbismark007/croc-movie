@@ -1,6 +1,8 @@
 # croc-movie
 Repo for project with https://www.themoviedb.org using IONIC and Angular 
 
+see Doc.pdf on https://github.com/alexanderbismark007/croc-movie/blob/master/src/docs/Croc-Movie_final.pdf
+
 ![alt text](https://github.com/alexanderbismark007/croc-movie/blob/master/src/docs/1.jpg)
 ![alt text](https://github.com/alexanderbismark007/croc-movie/blob/master/src/docs/2.jpg)
 ![alt text](https://github.com/alexanderbismark007/croc-movie/blob/master/src/docs/3.jpg)
