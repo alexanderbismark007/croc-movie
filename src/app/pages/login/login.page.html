@@ -32,8 +32,7 @@
       <ion-col>
         <ion-button type="submit"  
                     expand="block" 
-                    (click)="toMaster()" [color]="networkStatus && networkStatus.connected ? 'primary' : 'dark'"
-                    [disabled]="networkStatus && !networkStatus.connected"
+                    (click)="toMaster()" [color]="networkStatus && networkStatus.connected ? 'primary' : 'dark'"                    
         >{{ 'SIGNIN' | translate }}</ion-button>
         <a  class="small-text">{{ 'FORGOT' | translate }}</a>
       </ion-col>

@@ -200,7 +200,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/maps/maps.page.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/maps/maps.page.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -317,8 +317,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app/pages/maps/maps.page.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/pages/maps/maps.page.ts:30</a></div>
                 </td>
             </tr>
 
@@ -358,8 +358,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="55"
-                            class="link-to-prism">src/app/pages/maps/maps.page.ts:55</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/pages/maps/maps.page.ts:48</a></div>
                 </td>
             </tr>
 
@@ -399,8 +399,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/app/pages/maps/maps.page.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/pages/maps/maps.page.ts:25</a></div>
                 </td>
             </tr>
 
@@ -440,8 +440,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="112"
-                            class="link-to-prism">src/app/pages/maps/maps.page.ts:112</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/app/pages/maps/maps.page.ts:87</a></div>
                 </td>
             </tr>
 
@@ -508,8 +508,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">src/app/pages/maps/maps.page.ts:51</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/pages/maps/maps.page.ts:44</a></div>
                 </td>
             </tr>
 
@@ -551,7 +551,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/maps/maps.page.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/pages/maps/maps.page.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -579,7 +579,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/pages/maps/maps.page.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/pages/maps/maps.page.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -606,7 +606,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/pages/maps/maps.page.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/pages/maps/maps.page.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -633,7 +633,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/maps/maps.page.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/maps/maps.page.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -661,7 +661,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/pages/maps/maps.page.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/pages/maps/maps.page.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -679,7 +679,6 @@
 import { GoogleMaps, GoogleMap, GoogleMapsEvent, Marker, GoogleMapsAnimation, MyLocation } from &quot;@ionic-native/google-maps&quot;;
 import { Platform, LoadingController, ToastController, ModalController, NavController } from &quot;@ionic/angular&quot;;
 import { TranslateappService } from &#x27;../../services/translateapp.service&#x27;;
-import { MasterPage } from &#x27;../master/master.page&#x27;;
 
 @Component({
   selector: &quot;app-maps&quot;,
@@ -705,13 +704,7 @@ export class MapsPage implements OnInit {
   }
 
   loadMap() {
-    // Esta función inicializa la propiedad de clase
-    // map
-    // que va a contener el control de nuestro mapa de google
 
-    // Para crear nuestro mapa debemos enviar como parametros
-    // el id del div en donde se va a renderizar el mapa (paso anterior)
-    // y las opciones que configuran nuestro mapa
     this.map &#x3D; GoogleMaps.create(&quot;map_canvas&quot;, {
       camera: {
         target: {
@@ -729,36 +722,25 @@ export class MapsPage implements OnInit {
   }
 
   async locateHome() {
-    // Limpiamos todos los elementos de nuestro mapa
+ 
     this.map.clear();
 
-    // Creamos un componente de Ionic para mostrar un mensaje
-    // mientras obtenemos esperamos que termine el proceso de
-    // obtener la ubicación
     this.loading &#x3D; await this.loadingCtrl.create({
       message: &quot;Wait please&quot;
     });
     
-    // Presentamos el componente creado en el paso anterior
     await this.loading.present();
 
-    // Ejecutamos el método getMyLocation de nuestra propiedad de clase
-    // map
-    // para obtener nuestra ubicación actual
     this.map
       .getMyLocation()
       .then((location: MyLocation) &#x3D;&gt; {
-        // Una vez obtenida la ubicación cerramos el mensaje de diálogo
         this.loading.dismiss();
-
-        // Movemos la camara a nuestra ubicación con una pequeña animación
         this.map.animateCamera({
           target: location.latLng,
           zoom: 17,
           tilt: 30
         });
 
-        // Agregamos un nuevo marcador
         let marker: Marker &#x3D; this.map.addMarkerSync({
           title: &quot;Sending :-)&quot;,
           snippet: &quot;Enjoy the movie...&quot;,
@@ -766,25 +748,18 @@ export class MapsPage implements OnInit {
           animation: GoogleMapsAnimation.BOUNCE
         });
 
-        // Mostramos un InfoWindow
         marker.showInfoWindow();
 
-        // Podemos configurar un evento que se ejecute cuando
-        // se haya dado clic
         marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() &#x3D;&gt; {
           this.showToast(&quot;clicked!&quot;);
         });
       })
       .catch(error &#x3D;&gt; {
-        // En caso de que haya un problema en obtener la
-        // ubicación
         this.loading.dismiss();
         this.showToast(error.error_message);
       });
   }
 
-  // Función que muestra un Toast en la parte inferior
-  // de la pantalla
   async showToast(mensaje) {
     let toast &#x3D; await this.toastCtrl.create({
       message: mensaje,

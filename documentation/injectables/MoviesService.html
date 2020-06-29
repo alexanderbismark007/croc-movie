@@ -82,7 +82,7 @@
                                 <a href="#getDetailMovie">getDetailMovie</a>
                             </li>
                             <li>
-                                <a href="#getPopularMovies">getPopularMovies</a>
+                                <a href="#getListMovies">getListMovies</a>
                             </li>
                         </ul>
                     </td>
@@ -172,8 +172,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">src/app/services/movies.service.ts:56</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/services/movies.service.ts:55</a></div>
                 </td>
             </tr>
 
@@ -242,8 +242,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/app/services/movies.service.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/services/movies.service.ts:43</a></div>
                 </td>
             </tr>
 
@@ -306,18 +306,18 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getPopularMovies"></a>
+                    <a name="getListMovies"></a>
                     <span class="name">
                         <b>
-                            getPopularMovies
+                            getListMovies
                         </b>
-                        <a href="#getPopularMovies"><span class="icon ion-ios-link"></span></a>
+                        <a href="#getListMovies"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getPopularMovies(language: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>getListMovies(language: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -390,7 +390,7 @@ import { tap } from &quot;rxjs/operators&quot;;
 export class MoviesService {
   constructor(private http: HttpClient) {}
 
-  getPopularMovies(language: string) {
+  getListMovies(language: string) {
     const httpOptions &#x3D; { headers: new HttpHeaders({}) };
     let lang &#x3D; &quot;en-EN&quot;;
     if (language !&#x3D; null) {
@@ -408,7 +408,6 @@ export class MoviesService {
     } else {
       lang &#x3D; &quot;en-EN&quot;;
     }
-    console.log(&#x27;LANG&gt; &#x27;, lang , &#x27; LORLAGN&gt;&#x27; , language );
     return this.http
       .get&lt;ListMovie&gt;(
         &#x60;${environment.urlBase}/discover/movie?api_key&#x3D;${environment.apiKey}&amp;language&#x3D;${ lang }&amp;sort_by&#x3D;popularity.desc&amp;include_adult&#x3D;false&amp;include_video&#x3D;false&amp;page&#x3D;2&#x60;,

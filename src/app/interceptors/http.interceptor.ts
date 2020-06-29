@@ -7,11 +7,11 @@ import {
     HttpErrorResponse
   } from '@angular/common/http';
   import { Storage } from '@ionic/storage'
-  import { Observable, throwError, from} from 'rxjs';
-  import { map, tap, catchError, switchMap } from 'rxjs/operators';
   import { Injectable } from '@angular/core';
   import { LoadingController, ToastController } from '@ionic/angular';
-import { environment } from '../../environments/environment.prod';
+  import { environment } from '../../environments/environment.prod';
+  import { Observable, throwError, from} from 'rxjs';
+  import { map, tap, catchError, switchMap } from 'rxjs/operators';
 
   const TOKEN_KEY = 'BismarkToken';
   @Injectable()
@@ -23,7 +23,11 @@ import { environment } from '../../environments/environment.prod';
                 public loadingCtrl: LoadingController,
                 private toastCtrl: ToastController) { }
 
-                
+    /**
+     * Constructor
+     * @param request parameter HttpRequest for process all request
+     * @param next next HttpHandler
+     */           
     intercept(request: HttpRequest<any>, 
                  next: HttpHandler): 
             Observable<HttpEvent<any>> {
@@ -61,6 +65,10 @@ import { environment } from '../../environments/environment.prod';
         );
     }
 
+  /**
+   * Method for Toast action
+   * @param msg Message to print
+   */
   async presentErrorToast(msg) {
     const toast = await this.toastCtrl.create({
       message: msg,
@@ -75,7 +83,7 @@ import { environment } from '../../environments/environment.prod';
   }
 
   /**
-   * 
+   * Method for time evento show
    */
   async presentLoading() {
     this.isLoading = true;
@@ -90,7 +98,9 @@ import { environment } from '../../environments/environment.prod';
     });
   }
   
-  // Cierre del loading
+ /**
+  * Close method
+  */
   async dismissLoading() {
     this.isLoading = false;
     return await this.loadingCtrl.dismiss().then(() => console.log('dismissed'));

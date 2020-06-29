@@ -250,7 +250,7 @@ import { HttpConfigInterceptor } from &#x27;./interceptors/http.interceptor&#x27
 import { TranslateModule, TranslateLoader } from &#x27;@ngx-translate/core&#x27;;
 import { TranslateHttpLoader } from &#x27;@ngx-translate/http-loader&#x27;;
 import { TranslateappService } from &#x27;./services/translateapp.service&#x27;;
-
+import { Network } from &#x27;@ionic-native/network/ngx&#x27;;
 
 export function LanguageLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, &#x27;assets/i18n/&#x27;, &#x27;.json&#x27;);
@@ -264,8 +264,8 @@ export function LanguageLoader(http: HttpClient) {
     IonicModule.forRoot(), 
     AppRoutingModule,
     ComponentsModule,
-    HttpClientModule,
-    IonicStorageModule.forRoot(),
+    HttpClientModule,    
+    IonicStorageModule.forRoot(),    
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -277,6 +277,7 @@ export function LanguageLoader(http: HttpClient) {
   providers: [
     StatusBar,
     SplashScreen,
+    Network,
     TranslateappService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true },

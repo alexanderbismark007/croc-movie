@@ -41,7 +41,7 @@ export class MasterPage implements OnInit {
     this.networkStatus = await Network.getStatus();
 
     if (this.networkStatus.connected) {
-      console.log('Modo online');
+      console.log('Online mode');
       this.movieService
         .getListMovies(this.selectedLanguage)
         .subscribe((res) => {
@@ -49,8 +49,8 @@ export class MasterPage implements OnInit {
           this.localData.saveLocalListMovies(this.movies, this.networkStatus.connected);           
         });        
     } else {
-       console.log('Modo offline');       
-       this.localData.gets(); 
+       console.log('Offline mode');       
+       this.localData.getLocalListMovies(); 
        //console.log('>>>',this.localData.listMovie);
        this.movies = this.localData.listMovie;      
     } 

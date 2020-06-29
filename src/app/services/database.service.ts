@@ -21,7 +21,7 @@ export class DatabaseService {
     }
   }
 
-  async gets(): Promise<Movie> {
+  async getLocalListMovies(): Promise<Movie> {
     try {
       let result : Movie[]=[];
       let lstMovie : Movie[]=[];

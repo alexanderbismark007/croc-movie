@@ -30,6 +30,8 @@
     "@ionic/storage": "^2.2.0",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
+    "cordova-android": "^8.1.0",
+    "cordova-androidx-build": "^1.0.4",
     "cordova-browser": "6.0.0",
     "cordova-plugin-googlemaps": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps.git#multiple_maps",
     "cordova-plugin-network-information": "^2.0.2",
@@ -83,7 +85,8 @@
       "cordova-plugin-network-information": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "android"
     ]
   }
 }

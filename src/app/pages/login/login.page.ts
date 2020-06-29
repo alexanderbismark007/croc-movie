@@ -26,6 +26,9 @@ export class LoginPage implements OnInit, OnDestroy {
     this.selectedLanguage = this.translateConfigService.getDefaultLanguage();  
   }
  
+  /**
+   * Init for login and internal behavior
+   */
   async ngOnInit() {
 
     this.networkListener = Network.addListener('networkStatusChange', (status) => {
@@ -41,15 +44,24 @@ export class LoginPage implements OnInit, OnDestroy {
     this.presentToast('Modo OFFLINE, No existe conexion a internet...');
   }
   
+  /**
+   * Destruct
+   */
   ngOnDestroy() {
     this.networkListener.remove();
   }
 
+  /**
+   * Setter methos for laguage APP
+   */
   languageChanged(){
     //console.log('Lang>', this.selectedLanguage)
     this.translateConfigService.setLanguage(this.selectedLanguage);
   }
 
+  /**
+   * Redirect event
+   */
   toMaster() {    
     if(this.networkStatus.connected)
       this.navCtrl.navigateForward('/master');
@@ -58,6 +70,10 @@ export class LoginPage implements OnInit, OnDestroy {
     }
   }
 
+  /**
+   * Toast component 
+   * @param input show message parameter
+   */
   async presentToast(input:string) {
     const toast = await this.toastController.create({
       message: input,
